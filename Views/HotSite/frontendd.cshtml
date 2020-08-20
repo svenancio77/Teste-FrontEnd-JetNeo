@@ -1,0 +1,110 @@
+
+@{
+    ViewBag.Title = "Teste Front End";
+    Layout = "~/Views/Shared/Base/_Layout.cshtml";
+}
+
+<!-- ~/Views/Shared/Blocks/Banner/_FullBanner.cshtml -->
+@Html.Action("FullBanner", "Banner")
+
+
+<div class="ui container grid">
+    <div class="sixteen column row">
+        <form method="post" action="#" class="ui form">
+            <h1>Teste Front-end</h1>      
+            <div class="field">
+                <label for="nome">Nome</label>
+                <input class="form-item" type="text" id="nome" onkeyup="escreverHTML('Nome', 'nome');" required/>
+            </div>
+            <div class="field">
+                <label for="email">E-mail</label>
+                <input class="form-item" type="email" id="email" onkeyup="escreverHTML('E-mail', 'email');" required/>
+            </div>
+            <div class="field">
+                <label for="tel">Telefone</label>
+                <input class="form-item" type="tel" id="tel" onkeyup="escreverHTML('Telefone', 'tel');" required/>
+            </div>
+            <div class="field">
+                <label for="assu">Assunto</label>
+                <input class="form-item" id="assu" onkeyup="escreverHTML('Assunto', 'assu');" required/>
+            </div>
+            <div class="field">
+                <label for="msg">Mensagem</label>
+                <textarea class="form-item" id="msg" onkeyup="escreverHTML('Mensagem', 'msg');" required></textarea>
+            </div>
+            <input class="ui button" type="submit" value="Enviar" name="sended">
+        </form>
+        
+        <div class="ui card">
+            <div class="content">
+                <h2>Saída</h2>
+            </div>
+            <div id="res">
+                <img>
+            </div>
+            <div class="content">
+                <span class="right floated">
+                <i class="heart outline like icon"></i>
+                17 likes
+                </span>
+                <i class="comment icon"></i>
+                3 comments
+            </div>
+            <div class="extra content">
+                <div class="ui large transparent left icon input">
+                <i class="heart outline icon"></i>
+                <input type="text" placeholder="Add Comment...">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="res">
+            <h2>Saída</h2>
+        </div>
+    </div>
+</div>
+    
+<script type="text/javascript" >
+
+    var list = document.querySelectorAll('.form-item');
+
+    
+
+    list.forEach(element => {
+        var node = document.createElement('p'),
+        texto = document.createTextNode(element.previousSibling.previousSibling.innerHTML + ": ");
+        area = document.createElement('span');
+
+        if(sessionStorage.getItem(element.id)){
+            if(element.tagName == 'TEXTAREA'){
+                element.innerHTML = sessionStorage.getItem(element.id);
+            } else {
+                element.setAttribute('value', sessionStorage.getItem(element.id));
+            }
+            var texto2 = document.createTextNode(sessionStorage.getItem(element.id));
+            area.appendChild(texto2);
+        }
+
+        node.appendChild(texto);
+
+        document.getElementById('res').appendChild(node);
+
+        node.appendChild(area);
+
+        area.classList.add(element.id);
+
+    });
+
+    var escreverHTML = function(label, id){
+        var valor = document.getElementById(id).value;
+
+        sessionStorage.setItem(id, valor);
+        
+        var local = document.querySelector(`span.${id}`);
+        local.innerHTML = valor;
+
+    }
+</script>

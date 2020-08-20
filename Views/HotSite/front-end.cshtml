@@ -1,0 +1,163 @@
+<<<<<<< HEAD
+
+@{
+    ViewBag.Title = "Teste Front End";
+    Layout = "~/Views/Shared/Base/_Layout.cshtml";
+}
+
+    <h1>Teste Front End</h1>
+    
+    <div class="ui container grid">
+      <form class="ui form" name="form" id="formID" >
+        <div class="required field">
+          <label>NOME</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome" required>
+            <input type="text" name="nome" id="demo"/>
+        </div>
+
+        <div class="required field">
+          <label>E-MAIL</label>
+            <input type="email" name="email" id="email" placeholder="Email" required >
+            <input type="email" name="nome" id="demo2"/>
+        </div>
+            
+        <div class="required field">
+          <label>TELEFONE</label>
+            <input type="tel" name="telefone" id="telefone" placeholder="(00) 00000-0000"  required>
+            <input type="tel" name="nome" id="demo3"/>
+         </div>
+
+        <div class="required field"> 
+          <label>ASSUNTO</label>
+            <input type="text" name="assunto" id="assunto" placeholder="Assunto"  required>
+            <input type="text" name="nome" id="demo4"/>
+        </div>
+
+        <div class="required field">
+          <label>MENSAGEM</label>
+            <input type="text" style="height:80px" name="mensagem" id="mensagem" maxlength="200" placeholder="Mensagem"  required>
+            <input type="text" style="height:80px" name="nome" id="demo5"/>
+        </div><br><br>
+      
+          <input class="ui green button" type="submit" value="Enviar" name="gravar" id="gravar"/>
+          <button class = "ui red button"  value="recuperar" name="recuperar" id="recuperar">RECUPERAR</button>
+          
+        </form><br><br>
+    </div>
+
+
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
+  </head>
+
+<body >
+    <h1>Teste Front End</h1>
+    
+    <div class="ui container grid">
+      <form class="ui form" name="form" id="formID">
+        <div class="required field">
+          <label>NOME</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome"  oninput="mostrar()" required>
+            <p style="margin-left: 300px; margin-top:-23px" id="demo"></p><br><br>
+        </div>
+
+        <div class="required field">
+          <label>E-MAIL</label>
+            <input type="email" name="email" id="email" placeholder="Email" oninput="mostrar2()" required >
+            <p style="margin-left: 300px; margin-top:-23px" id="demo2"></p><br><br>
+        </div>
+            
+        <div class="required field">
+          <label>TELEFONE</label>
+            <input type="tel" name="tel" id="telefone" placeholder="(00) 00000-0000" oninput="mostrar3()" required>
+            <p style="margin-left: 300px; margin-top:-23px" id="demo3"></p><br><br>
+        </div>
+
+        <div class="required field"> 
+          <label>ASSUNTO</label>
+            <input type="text" name="assu" id="assunto" placeholder="Assunto" oninput="mostrar4()" required>
+            <p style="margin-left: 300px; margin-top:-23px" id="demo4"></p><br><br>
+        </div>
+
+        <div class="required field">
+          <label>MENSAGEM</label>
+            <input type="text" style="heigth:150px" name="msg" id="mensagem" maxlength="200" placeholder="Mensagem" oninput="mostrar5()" required>
+            <p style="margin-left: 500px; margin-top:-23px" id="demo5"></p>
+        </div><br><br>
+
+          <input class="ui green button" type="submit" value="Enviar" name="gravar" id="gravar" onclick="gravarSession()">
+          <input class = "ui red button" type ="submit" value="Recuperar" name="recuperar" id="recupera" onclick="recuperarSession()">
+          
+        </form><br><br>
+    </div>
+             
+
+</body>
+</html>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+>>>>>>> db11a0ce6bf8a0b9a1c54f32ceb34799f4b6fb96
